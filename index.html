@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Armani.com Fake Web Store</title>
+</head>
+<body>
+  <header class="header">
+    <div class="search">
+      <svg class="icon-search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 250.313 250.313" enable-background="new 0 0 250.313 250.313;" xml:space="preserve"><g><path style="fill-rule:evenodd;clip-rule:evenodd;" d="M244.186,214.604l-54.379-54.378c-0.289-0.289-0.628-0.491-0.93-0.76 c10.7-16.231,16.945-35.66,16.945-56.554C205.822,46.075,159.747,0,102.911,0S0,46.075,0,102.911 c0,56.835,46.074,102.911,102.91,102.911c20.895,0,40.323-6.245,56.554-16.945c0.269,0.301,0.47,0.64,0.759,0.929l54.38,54.38 c8.169,8.168,21.413,8.168,29.583,0C252.354,236.017,252.354,222.773,244.186,214.604z M102.911,170.146 c-37.134,0-67.236-30.102-67.236-67.235c0-37.134,30.103-67.236,67.236-67.236c37.132,0,67.235,30.103,67.235,67.236 C170.146,140.044,140.043,170.146,102.911,170.146z"/></g></svg>
+      <input type="text" id="js-busca"/>
+    </div>
+    <a href="/" class="logo">
+      <img src="./img/logo.png" alt="Armani Web Store" />
+    </a>
+    <div class="action">
+      <span class="favorite">
+        <svg class="icon-favorite" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="510px" height="510px" viewBox="0 0 510 510" style="enable-background:new 0 0 510 510;" xml:space="preserve"> <g> <path d="M255,489.6l-35.7-35.7C86.7,336.6,0,257.55,0,160.65C0,81.6,61.2,20.4,140.25,20.4c43.35,0,86.7,20.4,114.75,53.55 C283.05,40.8,326.4,20.4,369.75,20.4C448.8,20.4,510,81.6,510,160.65c0,96.9-86.7,175.95-219.3,293.25L255,489.6z"/> </g> </svg>
+      </span>
+      <!-- === 👻 RENDER:sacola === -->
+      <div class="bag" id="js-sacola">
+      </div>
+    </div>
+  </header>
+	<div class="container">
+		<nav>
+			<ul class="menu" id="js-menu">
+        <li><a href="#all" title="Todos">ALL</a></li>
+        <li><a href="#men" title="for Men">MEN</a></li>
+        <li><a href="#women" title="for Women">WOMEN</a></li>
+        <li><a href="#kids" title="for Kids">KIDS</a></li>
+			</ul>
+		</nav>
+    <!-- === 👻 RENDER:produtos === -->
+    <section class="section" id="js-produtos">
+    </section>
+	</div>
+
+  <div class="cart">
+    <h1>Meu Carrinho</h1>
+
+    <!-- === 👻 RENDER:carrinho === -->
+    <ul id="js-carrinho">
+    </ul>
+
+    <!-- === 👻 RENDER:total carrinho === -->
+    <div class="cart__total" id="js-total-carrinho">
+    </div>
+
+    <!-- === 👻 RENDER:finalizar carrinho === -->
+    <div class="cart__checkout" id="js-finalizar-carrinho">
+    </div>
+  </div>
+
+  <div class="cover"></div>
+
+  <div class="checkout" id="js-pagamento">
+		<div class="checkout-limiter">
+			<span class="checkout-close" id="js-pagamento-fechar">&times;</span>
+			<header class="checkout-header">
+				<img src="/img/logo.png" alt="Armani">
+			</header>
+			<form action="" class="form" id="js-formulario" method="POST">
+				<div class="form-group">
+					<div class="form-input">
+						<svg class="icon icon_email" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="512px" height="512px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <path d="M448,64H64C28.656,64,0,92.656,0,128v256c0,35.344,28.656,64,64,64h384c35.344,0,64-28.656,64-64V128 C512,92.656,483.344,64,448,64z M342.656,234.781l135.469-116.094c0.938,3,1.875,6,1.875,9.313v256 c0,2.219-0.844,4.188-1.281,6.281L342.656,234.781z M448,96c2.125,0,4,0.813,6,1.219L256,266.938L58,97.219 C60,96.813,61.875,96,64,96H448z M33.266,390.25C32.828,388.156,32,386.219,32,384V128c0-3.313,0.953-6.313,1.891-9.313 L169.313,234.75L33.266,390.25z M64,416c-3.234,0-6.172-0.938-9.125-1.844l138.75-158.563l51.969,44.531 C248.578,302.719,252.297,304,256,304s7.422-1.281,10.406-3.875l51.969-44.531l138.75,158.563C454.188,415.062,451.25,416,448,416 H64z"/></svg>
+						<input type="email" placeholder="Seu Email" id="email" name="email" />
+					</div>
+					<span class="error"></span>
+				</div>
+				<div class="form-group">
+					<div class="form-group-nested">
+						<div class="form-input">
+							<svg class="icon icon_card" x="0px" y="0px" width="459.669px" height="459.669px" viewBox="0 0 459.669 459.669" enableBackground="new 0 0 459.669 459.669;" xml:space="preserve"> <path d="M404.723,76.087H54.948C24.649,76.087,0,100.735,0,131.035v197.599c0,30.298,24.649,54.948,54.948,54.948h349.774 c30.298,0,54.947-24.65,54.947-54.948V131.035C459.67,100.735,435.021,76.087,404.723,76.087z M429.267,328.633 c0,13.534-11.011,24.544-24.544,24.544H54.948c-13.534,0-24.545-11.01-24.545-24.544V196.214h398.863L429.267,328.633 L429.267,328.633z M429.267,152.839l-398.863,0.029v-21.834c0-13.534,11.011-24.545,24.545-24.545h349.774 c13.533,0,24.544,11.011,24.544,24.545V152.839z"/> <path d="M68.136,324.98h83.23c2.98,0,5.398-2.416,5.398-5.396v-16.421c0-2.981-2.418-5.397-5.398-5.397h-83.23 c-2.981,0-5.398,2.416-5.398,5.397v16.421C62.737,322.564,65.154,324.98,68.136,324.98z"/> <path d="M337.963,324.98h24.756c14.288,0,25.87-11.582,25.87-25.869v-24.756c0-14.287-11.582-25.869-25.87-25.869h-24.756 c-14.287,0-25.869,11.582-25.869,25.869v24.756C312.094,313.398,323.676,324.98,337.963,324.98z"/> </svg>
+							<input type="number" placeholder="Card Number" id="card" name="card" />
+						</div>
+						<div class="form-input">
+							<svg class="icon icon_calendar" version="1.1" x="0px" y="0px" viewBox="0 0 32 32" enableBackground="new 0 0 32 32;" xml:space="preserve"> <path d="M29.334,3H25V1c0-0.553-0.447-1-1-1s-1,0.447-1,1v2h-6V1c0-0.553-0.448-1-1-1s-1,0.447-1,1v2H9V1 c0-0.553-0.448-1-1-1S7,0.447,7,1v2H2.667C1.194,3,0,4.193,0,5.666v23.667C0,30.806,1.194,32,2.667,32h26.667 C30.807,32,32,30.806,32,29.333V5.666C32,4.193,30.807,3,29.334,3z M30,29.333C30,29.701,29.701,30,29.334,30H2.667 C2.299,30,2,29.701,2,29.333V5.666C2,5.299,2.299,5,2.667,5H7v2c0,0.553,0.448,1,1,1s1-0.447,1-1V5h6v2c0,0.553,0.448,1,1,1 s1-0.447,1-1V5h6v2c0,0.553,0.447,1,1,1s1-0.447,1-1V5h4.334C29.701,5,30,5.299,30,5.666V29.333z"/> <rect x="7" y="12" width="4" height="3"/> <rect x="7" y="17" width="4" height="3"/> <rect x="7" y="22" width="4" height="3"/> <rect x="14" y="22" width="4" height="3"/> <rect x="14" y="17" width="4" height="3"/> <rect x="14" y="12" width="4" height="3"/> <rect x="21" y="22" width="4" height="3"/> <rect x="21" y="17" width="4" height="3"/> <rect x="21" y="12" width="4" height="3"/> </svg>
+							<input type="number" placeholder="MM/YY" id="expires" name="expires" />
+						</div>
+						<div class="form-input">
+							<svg class="icon icon_lock" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 485 485" style="enable-background:new 0 0 485 485;" xml:space="preserve"> <polygon points="307.299,307.286 286.086,286.073 230.052,342.107 192.457,304.513 171.244,325.726 230.052,384.534 	"/> <path d="M345,175v-72.5C345,45.981,299.019,0,242.5,0S140,45.981,140,102.5V175H70v310h345V175H345z M170,102.5 c0-39.977,32.523-72.5,72.5-72.5S315,62.523,315,102.5V175H170V102.5z M385,455H100V205h285V455z"/></svg>
+							<input type="number" placeholder="CVC" id="cvc" name="cvc" />
+						</div>
+					</div>
+					<span class="error"></span>
+				</div>
+				<div class="form-submit">
+					<button class="btn btn--final" type="submit" id="js-pagamento-total">Pagar R$ ???,??</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+  <footer class="footer">
+    <p>Powered by NERDS OF ULBRA - Copyright © 2017 Fake Armani. - Maybe Some Rights Reserved</p>
+  </footer>
+  <script src="./js/libs/helpers.js"></script>
+  <script src="./js/initialState.js"></script>
+  <script src="./js/store.js"></script>
+  <script src="./js/create.js"></script>
+  <script src="./js/render.js"></script>
+  <script src="./js/index.js"></script>
+
+</body>
+</html>

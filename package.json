@@ -1,0 +1,12 @@
+{
+  "name": "expalmer-curso-js-lojinha-bb49f8eb0bb4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "json.js",
+  "scripts": {
+    "start": "superstatic"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
